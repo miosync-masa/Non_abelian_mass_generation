@@ -1,0 +1,176 @@
+ ======================================================================================
+FINITE-SIZE FALSIFICATION SUITE
+Naive continuum-scaling diagnostics for a controlled SU(2) two-lump family
+======================================================================================
+
+======================================================================================
+DATASET: fixed lattice units
+======================================================================================
+   L      sep      rho        DV_NA       DDVint         R_NA        R_int         d_NA        d_int
+----------------------------------------------------------------------------------------------------
+   4    2.000    0.800   411.247971  -174.725128     2.200686    -2.094095     0.267740    -0.113753
+   5    2.000    0.800   570.298126  -324.561584     2.141502    -2.485744     0.152080    -0.086550
+   6    2.000    0.800   671.010803  -517.186356     2.128606    -2.729343     0.086293    -0.066511
+   7    2.000    0.800   753.188019  -707.435852     2.095674    -2.806353     0.052283    -0.049107
+   8    2.000    0.800   812.993134  -902.747742     2.071480    -2.896312     0.033081    -0.036733
+  10    2.000    0.800   922.795410 -1260.621948     1.994771    -2.994823     0.015380    -0.021010
+  12    2.000    0.800  1021.666931 -1587.939392     1.926253    -3.052693     0.008212    -0.012763
+
+======================================================================================
+DATASET: fixed fractions
+======================================================================================
+   L      sep      rho        DV_NA       DDVint         R_NA        R_int         d_NA        d_int
+----------------------------------------------------------------------------------------------------
+   4    1.333    0.520   319.997665  -222.084122     1.979618    -2.355948     0.208332    -0.144586
+   5    1.667    0.650   480.306137  -392.969849     2.041015    -2.572917     0.128082    -0.104792
+   6    2.000    0.780   669.806061  -513.022827     2.127027    -2.729356     0.086138    -0.065975
+   7    2.333    0.910   940.235992  -550.399506     2.381837    -2.417093     0.065267    -0.038206
+   8    2.667    1.040  1063.380829  -710.165314     2.394996    -2.515032     0.043269    -0.028897
+  10    3.333    1.300  1264.576477  -998.585724     2.364090    -2.615893     0.021076    -0.016643
+  12    4.000    1.560  1457.159729 -1217.633057     2.310361    -2.657519     0.011712    -0.009787
+
+======================================================================================
+FALSIFICATION ANALYSIS: fixed lattice units
+======================================================================================
+
+Observable: DeltaV_NA
+  trend          : monotone_increasing
+  plateau_score  : 0.092726   (smaller = more plateau-like)
+  suspicion_score: 0.963632 (larger = more anti-plateau)
+  best_all_model : A + B/L
+  best_all_BIC   : 46.280909
+  best_finite    : A + B/L
+  best_finite_BIC: 46.280909
+
+Observable: DeltaDeltaV_int
+  trend          : monotone_decreasing
+  plateau_score  : 0.223779   (smaller = more plateau-like)
+  suspicion_score: 1.618894 (larger = more anti-plateau)
+  best_all_model : A + B/L
+  best_all_BIC   : 74.040063
+  best_finite    : A + B/L
+  best_finite_BIC: 74.040063
+
+Observable: DeltaV_NA / V_Ab
+  trend          : monotone_decreasing
+  plateau_score  : 0.029697   (smaller = more plateau-like)
+  suspicion_score: 1.648486 (larger = more anti-plateau)
+  best_all_model : B*L^p
+  best_all_BIC   : -51.888657
+  best_finite    : A + B/L
+  best_finite_BIC: -45.520839
+
+Observable: DeltaDeltaV_int / |DeltaV_int_Ab|
+  trend          : monotone_decreasing
+  plateau_score  : 0.021654   (smaller = more plateau-like)
+  suspicion_score: 0.608271 (larger = more anti-plateau)
+  best_all_model : A + B/L^2
+  best_all_BIC   : -55.216596
+  best_finite    : A + B/L^2
+  best_finite_BIC: -55.216596
+
+Observable: DeltaV_NA / Np
+  trend          : monotone_decreasing
+  plateau_score  : 0.553278   (smaller = more plateau-like)
+  suspicion_score: 3.266392 (larger = more anti-plateau)
+  best_all_model : A + B/L^2
+  best_all_BIC   : -64.779235
+  best_finite    : A + B/L^2
+  best_finite_BIC: -64.779235
+
+Observable: DeltaDeltaV_int / Np
+  trend          : monotone_increasing
+  plateau_score  : 0.423067   (smaller = more plateau-like)
+  suspicion_score: 2.615333 (larger = more anti-plateau)
+  best_all_model : A + B/L
+  best_all_BIC   : -86.039527
+  best_finite    : A + B/L
+  best_finite_BIC: -86.039527
+
+======================================================================================
+FALSIFICATION ANALYSIS: fixed fractions
+======================================================================================
+
+Observable: DeltaV_NA
+  trend          : monotone_increasing
+  plateau_score  : 0.127425   (smaller = more plateau-like)
+  suspicion_score: 1.137123 (larger = more anti-plateau)
+  best_all_model : A + B/L
+  best_all_BIC   : 64.571032
+  best_finite    : A + B/L
+  best_finite_BIC: 64.571032
+
+Observable: DeltaDeltaV_int
+  trend          : monotone_decreasing
+  plateau_score  : 0.213045   (smaller = more plateau-like)
+  suspicion_score: 1.565225 (larger = more anti-plateau)
+  best_all_model : A + B/L
+  best_all_BIC   : 69.704306
+  best_finite    : A + B/L
+  best_finite_BIC: 69.704306
+
+Observable: DeltaV_NA / V_Ab
+  trend          : mixed
+  plateau_score  : 0.014839   (smaller = more plateau-like)
+  suspicion_score: 0.074196 (larger = more anti-plateau)
+  best_all_model : A + B/L^2
+  best_all_BIC   : -32.446561
+  best_finite    : A + B/L^2
+  best_finite_BIC: -32.446561
+
+Observable: DeltaDeltaV_int / |DeltaV_int_Ab|
+  trend          : mixed
+  plateau_score  : 0.023043   (smaller = more plateau-like)
+  suspicion_score: 0.115214 (larger = more anti-plateau)
+  best_all_model : A + B/L^2
+  best_all_BIC   : -27.957800
+  best_finite    : A + B/L^2
+  best_finite_BIC: -27.957800
+
+Observable: DeltaV_NA / Np
+  trend          : monotone_decreasing
+  plateau_score  : 0.521970   (smaller = more plateau-like)
+  suspicion_score: 3.109848 (larger = more anti-plateau)
+  best_all_model : A + B/L^2
+  best_all_BIC   : -81.732378
+  best_finite    : A + B/L^2
+  best_finite_BIC: -81.732378
+
+Observable: DeltaDeltaV_int / Np
+  trend          : monotone_increasing
+  plateau_score  : 0.428617   (smaller = more plateau-like)
+  suspicion_score: 2.643083 (larger = more anti-plateau)
+  best_all_model : A + B/L^2
+  best_all_BIC   : -68.844962
+  best_finite    : A + B/L^2
+  best_finite_BIC: -68.844962
+
+Saved figure: finite_size_falsification_suite.png
+
+======================================================================================
+SUMMARY
+======================================================================================
+Interpretation rule of thumb:
+  - plateau_score small + finite model preferred => naive finite limit is plausible
+  - large drift / monotone trend / power-growth preference => naive finite limit is suspicious
+
+Fixed lattice units:
+- DeltaV_NA: trend=monotone_increasing, best_all=A + B/L, best_finite=A + B/L, plateau_score=0.0927, suspicion_score=0.9636
+- DeltaDeltaV_int: trend=monotone_decreasing, best_all=A + B/L, best_finite=A + B/L, plateau_score=0.2238, suspicion_score=1.6189
+- DeltaV_NA / V_Ab: trend=monotone_decreasing, best_all=B*L^p, best_finite=A + B/L, plateau_score=0.0297, suspicion_score=1.6485
+- DeltaDeltaV_int / |DeltaV_int_Ab|: trend=monotone_decreasing, best_all=A + B/L^2, best_finite=A + B/L^2, plateau_score=0.0217, suspicion_score=0.6083
+- DeltaV_NA / Np: trend=monotone_decreasing, best_all=A + B/L^2, best_finite=A + B/L^2, plateau_score=0.5533, suspicion_score=3.2664
+- DeltaDeltaV_int / Np: trend=monotone_increasing, best_all=A + B/L, best_finite=A + B/L, plateau_score=0.4231, suspicion_score=2.6153
+
+Fixed fractions:
+- DeltaV_NA: trend=monotone_increasing, best_all=A + B/L, best_finite=A + B/L, plateau_score=0.1274, suspicion_score=1.1371
+- DeltaDeltaV_int: trend=monotone_decreasing, best_all=A + B/L, best_finite=A + B/L, plateau_score=0.2130, suspicion_score=1.5652
+- DeltaV_NA / V_Ab: trend=mixed, best_all=A + B/L^2, best_finite=A + B/L^2, plateau_score=0.0148, suspicion_score=0.0742
+- DeltaDeltaV_int / |DeltaV_int_Ab|: trend=mixed, best_all=A + B/L^2, best_finite=A + B/L^2, plateau_score=0.0230, suspicion_score=0.1152
+- DeltaV_NA / Np: trend=monotone_decreasing, best_all=A + B/L^2, best_finite=A + B/L^2, plateau_score=0.5220, suspicion_score=3.1098
+- DeltaDeltaV_int / Np: trend=monotone_increasing, best_all=A + B/L^2, best_finite=A + B/L^2, plateau_score=0.4286, suspicion_score=2.6431
+
+Caution:
+This code does NOT prove non-existence of a continuum Yang-Mills theory.
+It tests whether several natural excess observables in a controlled family
+support or fail to support simple finite-size extrapolation scenarios.
